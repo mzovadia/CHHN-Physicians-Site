@@ -1,0 +1,76 @@
+{% extends 'master.html' %}
+{% set body_class = body_class + ' body-interior' %}
+
+{% block content %}
+
+<div class="interior-content">
+  <!-- START BREADCRUMBS -->
+  <nav class="full-width breadcrumbs-nav">
+  {% block breadcrumbs %}
+  {% endblock %}
+  </nav>
+  <!-- END BREADCRUMBS -->
+
+  <!-- START INTERIOR NAVIGATION -->
+  <nav class="one-fourth interior-nav">
+  {% block navigation %}
+  {% endblock %}
+  </nav>
+  <!-- END INTERIOR NAVIGATION -->
+
+  <!-- START INTERIOR PRIMARY CONTENT -->
+  <div class="one-half content-container">
+  {% block header %}
+  {% endblock %}
+
+    <div class="primary-content">
+    {% block primary_content %}
+    {% endblock %}
+    </div>
+  </div>
+  <!-- END INTERIOR PRIMARY CONTENT -->
+
+  <!-- START SIDEBAR  -->
+  <div class="one-fourth sidebar-content">
+    {% block sidebar %}
+    {% endblock %}
+  </div>
+  <!-- END SIDEBAR -->
+
+  <div class="clear"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="http://cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
+<script src="http://cdn.jsdelivr.net/velocity/1.1.0/velocity.ui.min.js"></script> 
+<script type="text/javascript">
+  //$('#tree-menu span.open').click(
+    //    function() {
+             //console.log('hover over');             
+      //       $(this).next().slideToggle("fast");
+        //     $(this).toggleClass("open closed");
+    //});   
+  var  $accordion = $('#tree-menu');
+  $accordion.find('div').css({ display : 'none', overflow : 'hidden'});
+  
+  $accordion.children('li').click(function() {
+    var $this = $(this);
+    var $targetContainer =  $this.next('div');
+    var $targetDescription =  $targetContainer.find('ul').first();
+    $('.accordion-element__term').removeClass('active');
+    $this.toggleClass('active');
+    
+    if(!$targetDescription.hasClass('active')) {
+      $targetContainer.css('display', 'block');
+      $targetDescription.css('margin-top', -$targetDescription.height());
+      $targetDescription.velocity({ marginTop: 0}, { duration: 350 });
+      $targetDescription.addClass('active');
+    } 
+    else {
+      $targetDescription.velocity({ marginTop: -$targetDescription.height()}, { duration: 350 });
+      $targetDescription.removeClass('active');
+    }
+  });
+</script>
+{% endblock %}

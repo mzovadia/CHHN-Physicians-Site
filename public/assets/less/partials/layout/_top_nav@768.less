@@ -1,0 +1,92 @@
+.page-header, .svg .page-header {
+    .logo {
+       background-size: 160px;
+        position: absolute;
+       
+        
+        top: 0;
+        width: 100%;
+    }
+}
+
+.main-menu {
+    padding-top: 70px;
+    background: #fff;
+    background-size: cover;
+    overflow: hidden;
+
+    .primary-nav {
+        display: block;
+        width: 100%;
+
+        li {
+            width: 100%;
+            text-align: left;
+
+            a {
+                border-top: 1px solid #425A7D;
+                line-height: 52px;
+                width: 90%;
+                margin: 0 auto;
+                padding: 0;
+                font-size: 16px;
+                display: none;
+                text-align: left;
+
+                &.button-login-mychart {
+                    display: none;
+                }
+
+                &.selected {
+                    .inline-block;
+                    width: 100%;
+                    margin: 0px;
+                    border: none;
+                    background: @color-dark-blue;
+
+                    &:before {
+                        .ff-icon;
+                        content: @icon-character-menu;
+                        font-size: 36px;
+                        margin: 0 10px;
+                        position: relative;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+
+        .home {
+            display: block;
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+/*.body-home .main-menu {
+
+
+    .primary-nav {
+
+
+        li {
+
+            a {
+                display:block;
+            }
+
+            a.button-login-mychart {
+                display:block;
+            }
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}*/
