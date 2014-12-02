@@ -5,7 +5,7 @@
             display: block;
             height: 1px;
             background: #dfe1e3;
-            margin-left: 225px;
+            margin-left: 350px;
             position: absolute;
             left: 0;
             right: 0;
@@ -14,8 +14,10 @@
     ul {
         list-style-type: none;
         float: right;
+        margin-top: 0;
         li {
-            display: inline-block;
+            float: left;
+            padding: 0 15px;
         }
         a {
             .ff-pt-bold;
@@ -29,12 +31,28 @@
         }
     }
     .main-tertiary {
+        display: table;
         position: relative;
         margin-bottom: 2px;
         li {
-            margin-left: 25px;
+            background: #cbe5ec;
+            display: table-cell;
+            float: none;
+            padding-top: 9px;
+        }
+        li:first-child {
+            font-size: small;
+            font-weight: 700;
+            vertical-align: top;
+             span {
+                display: block;
+            }
+        }
+        li:last-child {
+            background: transparent;
         }
         a {
+            color: @default-text-color;
             line-height: 3;
             min-height: 30px;
             padding-left: 30px;
@@ -52,10 +70,8 @@
         }
     }
     .secondary-tertiary {
-        margin-top: 0;
-        li {
-            margin-left: 30px;
-        }
+        margin-top: 12px;
+        margin-bottom: 2px;
         a {
             font-size: 12px;
             &.giving {

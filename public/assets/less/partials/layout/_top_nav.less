@@ -8,19 +8,20 @@
     }
     .logo {
         .inline-block;
+        float: left;
         width: 346px;
-        height: 112px;
-        background: url('/assets/img/logo.png') no-repeat center top;
+        height: 93px;
+        background: url('/assets/img/tchp-logo.png') no-repeat center top;
         position: relative;
         z-index: 999;
     }
 
-    .svg & .logo {
-        background-image: url('/assets/img/logo.svg');
-        float: left;
-        height: 86px;
-        width: 225px;
-    }
+    // .svg & .logo {
+    //     background-image: url('/assets/img/logo.svg');
+    //     float: left;
+    //     height: 86px;
+    //     width: 225px;
+    // }
 }
 
 .main-menu {
@@ -37,9 +38,25 @@
         color: #000;
         float: left;
     }
+    input[type="text"] {
+        width: 240px;
+    }
+    ::-webkit-input-placeholder {
+   color: @default-text-color;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+     color: @default-text-color; 
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+     color: @default-text-color; 
+    }
+    :-ms-input-placeholder {  
+     color: @default-text-color;
+    }
     input[type="button"] {
-        background-color: #002d56;
+        background-color: #4fb3cf;
         border-radius: 0;
+        border-left: 1px solid #fff;
         height: 38px;
         position: relative;
         width: 40px;
@@ -135,7 +152,7 @@
     display: inline-block;
     padding: 0;
     margin: 0;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #339bb8;
     &:last-child {
         border-right: 0;
     }
