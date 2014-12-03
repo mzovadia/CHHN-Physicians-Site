@@ -90,7 +90,7 @@
             text-align: center;
             &:hover,
             &.selected {
-                background: @color-light-blue;
+                background: #1d88cb;
             }
             &.button-login-mychart {
                 .transparent-background(#e3b02a, 0.85);
@@ -169,7 +169,7 @@
 /* open state of first descendant link within a top level 
    navigation item */
  .nav-item > a.open {
-    background-color: @color-light-blue;
+    background-color: #1d88cb;
     border-bottom: none;
     z-index: 1;
 }
@@ -181,8 +181,8 @@
     top: 72px;
     margin-top: -9px;
     padding: 24px;
-    background-color: @color-light-blue;
-    border-bottom: 8px solid #1793df;
+    background-color: #1d88cb;
+    border-bottom: 8px solid #4da6dd;
     z-index: 999;
     .sub-nav-group.links1 {
         border-right: 1px solid #1793df;
@@ -191,22 +191,20 @@
         border-left: 1px solid #1793df;
     }
     .sub-nav-group:nth-of-type(2) {
-        float: right;
-        padding-left: 20px;
+        padding-left: 40px;
     }
 }
 /* sub-navigation panel open state */
  .sub-nav.open {
     display: block;
-    width: 100%;
 }
 /* list of items within sub-navigation panel */
  .sub-nav ul {
     display: inline-block;
+    float: left;
     vertical-align: top;
     margin: 0 1em 0 0;
     padding: 0;
-    width: 50%;
 }
 /* list item within sub-navigation panel */
  .sub-nav li {
@@ -232,7 +230,7 @@
     }
     li {
         a {
-            background: @color-light-blue;
+            background: #1d88cb;
             padding: 3px 8px;
             text-align: left;
             &:hover {
