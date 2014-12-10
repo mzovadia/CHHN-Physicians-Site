@@ -123,13 +123,13 @@ var icons = ["/_layouts/15/TCH.SharePoint.Intranet.Webparts/images/location_a.pn
             "/_layouts/15/TCH.SharePoint.Intranet.Webparts/images/location_c.png"]
  
 $(document).ready(function () {
-    if (mapExists()) {
-        initialize();
-                createMarker(39.999,-84.999,'<div class="infoWindow">POPUP INFO</div>',icons[0]);
-                createMarker(39.111,-84.111,'<div class="infoWindow">POPUP INFO</div>',icons[1]);
-                createMarker(38.222,-84.222,'<div class="infoWindow">POPUP INFO</div>',icons[2]);
-        var infowindow = new google.maps.InfoWindow({ minWidth: 200 });
-    }
+    //if (mapExists()) {
+    //    initialize();
+     //           createMarker(39.999,-84.999,'<div class="infoWindow">POPUP INFO</div>',icons[0]);
+        //         createMarker(39.111,-84.111,'<div class="infoWindow">POPUP INFO</div>',icons[1]);
+        //         createMarker(38.222,-84.222,'<div class="infoWindow">POPUP INFO</div>',icons[2]);
+        // var infowindow = new google.maps.InfoWindow({ minWidth: 200 });
+    //}
 });
  
 
@@ -169,7 +169,10 @@ function mapExists() {
         return false;
 }
 
+google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+
+
 
 
 {% block scripts %}
