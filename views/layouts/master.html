@@ -118,18 +118,16 @@ console.log(jQuery);
 var itemsPerPage = 3;
 var count = 0;
 var markersArray = [];
-var icons = ["/_layouts/15/TCH.SharePoint.Intranet.Webparts/images/location_a.png",
-            "/_layouts/15/TCH.SharePoint.Intranet.Webparts/images/location_b.png",
-            "/_layouts/15/TCH.SharePoint.Intranet.Webparts/images/location_c.png"]
+var icons = ["/assets/img/icons/a-marker.png",
+            "/assets/img/icons/b-marker.png",
+            "/assets/img/icons/c-marker.png"]
  
 $(document).ready(function () {
-    //if (mapExists()) {
+    // if (mapExists()) {
     //    initialize();
-     //           createMarker(39.999,-84.999,'<div class="infoWindow">POPUP INFO</div>',icons[0]);
-        //         createMarker(39.111,-84.111,'<div class="infoWindow">POPUP INFO</div>',icons[1]);
-        //         createMarker(38.222,-84.222,'<div class="infoWindow">POPUP INFO</div>',icons[2]);
-        // var infowindow = new google.maps.InfoWindow({ minWidth: 200 });
-    //}
+               
+    //     
+    // }
 });
  
 
@@ -143,6 +141,12 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    createMarker(39.999,-84.999,'<div class="infoWindow">POPUP INFO</div>',icons[0]);
+                createMarker(39.111,-84.111,'<div class="infoWindow">POPUP INFO</div>',icons[1]);
+                createMarker(38.222,-84.222,'<div class="infoWindow">POPUP INFO</div>',icons[2]);
+
+                var infowindow = new google.maps.InfoWindow({ minWidth: 200 });
 }
  
 function createMarker(lat, lng, html, icon) {
