@@ -132,6 +132,7 @@ $(document).ready(function () {
     }
 });
  
+
 function initialize() {
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     var latlng = new google.maps.LatLng(39.103, -84.511);
@@ -145,6 +146,7 @@ function initialize() {
 }
  
 function createMarker(lat, lng, html, icon) {
+    console.log ( '#This is a test' );
     var myLatLng = new google.maps.LatLng(lat, lng);
     var marker = new google.maps.Marker({
         map: map,
@@ -157,13 +159,16 @@ function createMarker(lat, lng, html, icon) {
     });
     markersArray.push(marker);
     return marker;
+    google.maps.event.trigger(map, 'resize');
 }
+
 function mapExists() {
     if ($('#map-canvas').length > 0) {
         return true;
     } else
         return false;
 }
+
 </script>
 
 
