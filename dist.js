@@ -20,6 +20,7 @@ pages = [
     '/contact-submitted.html',
     '/interior-content-full.html',
     '/network.html',
+    '/press-release.html',
     '/services.html',
     '/services-heart-vascular.html',
     '/community-detail-video.html',

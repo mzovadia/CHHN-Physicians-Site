@@ -20,6 +20,7 @@ module.exports = function(app, config) {
         'physician-details',
         'interior-content',
         'interior-content-3-column',
+        'press-release',
         'contact',
         'contact-submitted',
         'physician-landing',
