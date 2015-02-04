@@ -1,18 +1,21 @@
 .styled-dropdown.accordion {
 	.ff-pt-regular;
-    background: #4FB3CF url(/assets/img/arrow-down.png) 5px 50% no-repeat;
+    background: #4FB3CF url(/assets/img/arrow-down.png) 12px 50% no-repeat;
     font-size: 14px;
     border: 0;
     width: 100%;
+    &.open {
+        background: #4FB3CF url(/assets/img/arrow-right.png) 12px 50% no-repeat;
+    }
     .label {
         color: #fff;
         padding-left: 35px;
     }
-    // &:after {
-    //     background-color: transparent;
-    //     right: inherit !important;
-    //     content: @icon-character-caret-right;
-    // }
+    &:after {
+        background-color: transparent;
+        right: inherit !important;
+        content: none;
+    }
     &.open .dropdown-content {
         background: #fff;
         ul {
@@ -34,7 +37,7 @@
             }
         }
     }
-    // &.open:after {
-    //     content: @icon-character-caret-down;
-    // }
+    &.open:after {
+        content: none;
+    }
 }
